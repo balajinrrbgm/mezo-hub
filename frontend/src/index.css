@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-hub-bg text-white min-h-screen;
+  background-image: 
+    radial-gradient(ellipse at 10% 10%, rgba(107, 78, 255, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(247, 147, 26, 0.06) 0%, transparent 50%);
+}
+
+[data-rk] {
+  --rk-colors-accentColor: #6B4EFF !important;
+  --rk-colors-accentColorForeground: #fff !important;
+  --rk-colors-modalBackground: rgba(8, 16, 26, 1) !important;
+  --rk-colors-modalBorder: rgba(26, 48, 80, 1) !important;
+  --rk-colors-connectButtonBackground: rgba(18, 32, 53, 1) !important;
+  --rk-radii-connectButton: 12px !important;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-hub-bg; }
+::-webkit-scrollbar-thumb { @apply bg-hub-border rounded-full; }
+
+.card {
+  @apply bg-hub-card border border-hub-border rounded-2xl p-6;
+}
+
+.tab-active {
+  @apply bg-mezo text-white;
+}
+
+.tab-inactive {
+  @apply text-gray-400 hover:text-white;
+}
